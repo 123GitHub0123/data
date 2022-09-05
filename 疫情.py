@@ -33,7 +33,6 @@ f.write("""
             <th>本土无症状</th>
             <th>高|中风险地区</th>
             <th>数据更新时间</th>
-            <th>截至目前累计确诊</th>
         </tr>
     </thead>
     <tbody>
@@ -50,8 +49,6 @@ for i in range(len(data)):#使用for循环写入疫情数据文本
     RiskAreaNum = str(data[i]['highRiskAreaNum'])+" | "+str(data[i]['mediumRiskAreaNum'])
     # print('高|中风险地区：'+RiskAreaNum)
     citys = data[i]["province"]
-    adcode = "{}累计确诊".format(citys)+data[i]["adcode"]+"例"
-    # print("截至目前{}{}".format(citys,adcode))
     # print(data[i])
     # print('\n')
     f.write("""
@@ -61,9 +58,8 @@ for i in range(len(data)):#使用for循环写入疫情数据文本
                 <td>{}</td>
                 <td>{}</td>
                 <td>{}</td>
-                <td>{}</td>
             </tr>
-        """.format(city, local_confirm_add, local_wzz_add, RiskAreaNum, mtime,adcode))
+        """.format(city, local_confirm_add, local_wzz_add, RiskAreaNum, mtime))
 f.write("""
          </tbody>
     </table>
