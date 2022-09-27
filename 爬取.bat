@@ -1,0 +1,1 @@
+start cmd /c "cd ./&&python 31data.py"
