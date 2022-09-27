@@ -1,1 +1,1 @@
-start cmd /c "cd ./&&python 31data.py"
+start cmd /c "python 31data.py&&git add *&&git commit -m '更新'&&git push"
