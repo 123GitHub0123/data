@@ -90,7 +90,7 @@ f.write("""
 <head>
     <meta charset="UTF-8">
     <title>国内疫情</title>
-    <link href="index.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h2 class="text-center">最新全国疫情</h2>
